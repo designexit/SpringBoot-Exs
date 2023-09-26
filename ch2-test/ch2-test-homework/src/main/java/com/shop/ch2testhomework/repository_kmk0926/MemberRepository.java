@@ -1,7 +1,7 @@
-package com.shop.ch2testhomework.repository_lsy0926;
+package com.shop.ch2testhomework.repository_kmk0926;
 
 
-import com.shop.ch2testhomework.entity_lsy0926.Member;
+import com.shop.ch2testhomework.entity_kmk0926.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

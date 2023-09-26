@@ -1,7 +1,7 @@
-package com.shop.ch2testhomework.repository_lsy0926;
+package com.shop.ch2testhomework.repository_kmk0926;
 
-import com.shop.ch2testhomework.constant_lsy0926.UserRole;
-import com.shop.ch2testhomework.entity_lsy0926.Member;
+import com.shop.ch2testhomework.constant_kmk0926.UserRole;
+import com.shop.ch2testhomework.entity_kmk0926.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

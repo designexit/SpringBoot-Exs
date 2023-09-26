@@ -1,6 +1,6 @@
-package com.shop.ch2testhomework.entity_lsy0926;
+package com.shop.ch2testhomework.entity_kmk0926;
 
-import com.shop.ch2testhomework.constant_lsy0926.UserRole;
+import com.shop.ch2testhomework.constant_kmk0926.UserRole;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
