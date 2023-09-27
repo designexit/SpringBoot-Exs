@@ -6,7 +6,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.TestPropertySource;
+import org.thymeleaf.util.StringUtils;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -89,5 +93,100 @@ class MemberRepositoryTest {
         }
     }
 
+    @Test
+    @DisplayName("@Query를 이용한 유저 조회 테스트")
+    public void findByUserDescription(){
+        this.createMemberList();
+        List<Member> memberList =
+                memberRepository.findByUserDescription("실습 풀이중7");
+        for(Member member : memberList){
+            System.out.println(member.toString());
+        }
+    }
+
+    @Test
+    @DisplayName("@Query를 이용한 상유저 조회 테스트 native 속성 사용")
+    public void findByUserDescriptionTest(){
+        //this.createMemberList();
+        List<Member> memberList =
+                memberRepository.findByUserDescriptionByNative("실습 풀이중7");
+        for(Member member : memberList){
+            System.out.println(member.toString());
+        }
+    }
+
+    @Test
+    @DisplayName("Querydsl 조회 테스트1")
+    public void queryDslTest(){
+        this.createMemberList2();
+        JPAQueryFactory queryFactory = new JPAQueryFactory(em);
+        QMember qMember = QMember.member;
+        JPAQuery<Member> query  = queryFactory.selectFrom(qMember)
+                .where(qMember.userRole.eq(UserRole.USER))
+                .where(qMember.userDescription.like("%" + "실습 풀이중" + "%"))
+                .orderBy(qMember.regTime.desc());
+
+        List<Member> memberList = query.fetch();
+
+        for(Member member : memberList){
+            System.out.println(member.toString());
+        }
+    }
+
+    public void createMemberList2(){
+        for(int i=1;i<=5;i++){
+            Member member = new Member();
+            member.setUserNm("이상용"+i);
+            member.setUserDescription("실습 풀이중" +i);
+            member.setUserEmail("lsy"+i+"@naver.com");
+            member.setUserRole(UserRole.ADMIN);
+            member.setRegTime(LocalDateTime.now());
+            memberRepository.save(member);
+        }
+
+        for(int i=6;i<=10;i++){
+            Member member = new Member();
+            member.setUserNm("이상용"+i);
+            member.setUserDescription("실습 풀이중" +i);
+            member.setUserEmail("lsy"+i+"@naver.com");
+            member.setUserRole(UserRole.USER);
+            member.setRegTime(LocalDateTime.now());
+            memberRepository.save(member);
+        }
+    }
+
+    @Test
+    @DisplayName("상품 Querydsl 조회 테스트 2")
+    public void queryDslTest2(){
+
+        this.createItemList3();
+// 빌드 패턴으로, 쿼리에 관련된 옵션을 담을 인스턴스
+        BooleanBuilder booleanBuilder = new BooleanBuilder();
+        QMember member = QMember.member;
+        String userDescription = "테스트 상품 상세 설명";
+        String memberUserRole = "ADMIN";
+
+        booleanBuilder.and(member.itemDetail.like("%" + itemDetail + "%"));
+        booleanBuilder.and(member.price.gt(price));
+        System.out.println(ItemSellStatus.SELL);
+        if(StringUtils.equals(Q, ItemSellStatus.SELL)){
+            booleanBuilder.and(member.itemSellStatus.eq(ItemSellStatus.SELL));
+        }
+
+
+
+        // 부트, 페이징을 처리하기 위해서,
+        // 시스템으로 자주 반복되는 기능중에 하나인 페이징 처리 쉽게 해주는 클래스.
+        // ex) 0 페이지 -> 1페이지, size : 한 페이지에 보여주는 갯수
+
+        Pageable pageable = PageRequest.of(0, 5);
+        Page<Member> itemPagingResult = memberRepository.findAll(booleanBuilder, pageable);
+        System.out.println("total elements : " + itemPagingResult. getTotalElements ());
+
+        List<Member> resultItemList = itemPagingResult.getContent();
+        for(Member resultItem: resultItemList){
+            System.out.println(resultItem.toString());
+        }
+    }
 
 }
