@@ -38,6 +38,8 @@ class MemberControllerTest {
         memberFormDto.setName("홍길동");
         memberFormDto.setAddress("서울시 마포구 합정동");
         memberFormDto.setPassword(password);
+        // entity클래스 인 member 클래스 내부로 이동
+        // dto박스를 해당 엔티티 클래스 형으로 변환
         Member member = Member.createMember(memberFormDto, passwordEncoder);
         return memberService.saveMember(member);
     }

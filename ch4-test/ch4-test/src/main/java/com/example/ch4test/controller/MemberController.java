@@ -25,13 +25,19 @@ public class MemberController {
     private final MemberService memberService;
     private final PasswordEncoder passwordEncoder;
 
+    //회원가입 폼
     @GetMapping(value = "/new")
     public String memberForm(Model model){
+        // 서버->뷰 데이터 전달
         model.addAttribute("memberFormDto", new MemberFormDto());
+        // 뷰 리졸버, 타임리프 사용해서 회원가입 폼 html전달
         return "member/memberForm";
     }
 
+    //회원가입 처리
     @PostMapping(value = "/new")
+    // 유효성 체크, 값의 유무
+    //bindingResult -> 유효성 체크에서 오류 발생시 메세지 확인용도
     public String newMember(@Valid MemberFormDto memberFormDto, BindingResult bindingResult, Model model){
 
         if(bindingResult.hasErrors()){
@@ -50,6 +56,7 @@ public class MemberController {
         return "redirect:/";
     }
 
+    // 로그인 폼만 제공, 실제 처리는 시큐리티가...
     @GetMapping(value = "/login")
     public String loginMember(){
         return "/member/memberLoginForm";

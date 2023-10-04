@@ -9,11 +9,14 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 
 @Getter @Setter
+//회원가입시 입력 받은 데이커를 담을 용도 (박스)
 public class MemberFormDto {
 
+    //값 필수, 비워 두면 안됨
     @NotBlank(message = "이름은 필수 입력 값입니다.")
     private String name;
 
+    //값 필수, 비워 두면 안됨, 공백 유무
     @NotEmpty(message = "이메일은 필수 입력 값입니다.")
     @Email(message = "이메일 형식으로 입력해주세요.")
     private String email;
