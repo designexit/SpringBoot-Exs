@@ -1,8 +1,7 @@
 package com.example.ch8test.service;
 
-
-import com.example.ch8test.entity.Member;
 import com.example.ch8test.repository.MemberRepository;
+import com.example.ch8test.entity.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,13 +1,14 @@
 package com.example.ch8test.service;
 
+
 import com.example.ch8test.constant.ItemSellStatus;
 import com.example.ch8test.dto.CartItemDto;
-import com.example.ch8test.repository.CartItemRepository;
-import com.example.ch8test.repository.ItemRepository;
-import com.example.ch8test.repository.MemberRepository;
 import com.example.ch8test.entity.CartItem;
 import com.example.ch8test.entity.Item;
 import com.example.ch8test.entity.Member;
+import com.example.ch8test.repository.CartItemRepository;
+import com.example.ch8test.repository.ItemRepository;
+import com.example.ch8test.repository.MemberRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

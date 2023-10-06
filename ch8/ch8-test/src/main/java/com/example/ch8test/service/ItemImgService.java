@@ -1,6 +1,5 @@
 package com.example.ch8test.service;
 
-
 import com.example.ch8test.entity.ItemImg;
 import com.example.ch8test.repository.ItemImgRepository;
 import lombok.RequiredArgsConstructor;

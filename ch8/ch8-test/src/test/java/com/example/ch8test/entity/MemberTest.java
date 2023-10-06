@@ -1,6 +1,5 @@
 package com.example.ch8test.entity;
 
-
 import com.example.ch8test.repository.MemberRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

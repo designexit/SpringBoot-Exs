@@ -23,6 +23,7 @@ public class MainController {
     @GetMapping(value = "/")
     public String main(ItemSearchDto itemSearchDto, Optional<Integer> page, Model model){
 
+        // 부트에서 페이징 처리를 쉽게 해 주는 인터페이스 기능
         Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 6);
         Page<MainItemDto> items = itemService.getMainItemPage(itemSearchDto, pageable);
 
