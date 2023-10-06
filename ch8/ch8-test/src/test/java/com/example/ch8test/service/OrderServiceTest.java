@@ -1,15 +1,16 @@
 package com.example.ch8test.service;
 
-import com.shop.constant.ItemSellStatus;
-import com.shop.constant.OrderStatus;
-import com.shop.dto.OrderDto;
-import com.shop.entity.Item;
-import com.shop.entity.Member;
-import com.shop.entity.Order;
-import com.shop.entity.OrderItem;
-import com.shop.repository.ItemRepository;
-import com.shop.repository.MemberRepository;
-import com.shop.repository.OrderRepository;
+
+import com.example.ch8test.constant.ItemSellStatus;
+import com.example.ch8test.constant.OrderStatus;
+import com.example.ch8test.dto.OrderDto;
+import com.example.ch8test.entity.Item;
+import com.example.ch8test.entity.Member;
+import com.example.ch8test.entity.Order;
+import com.example.ch8test.entity.OrderItem;
+import com.example.ch8test.repository.ItemRepository;
+import com.example.ch8test.repository.MemberRepository;
+import com.example.ch8test.repository.OrderRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @Transactional

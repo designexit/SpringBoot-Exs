@@ -1,7 +1,7 @@
 package com.example.ch8test.service;
 
-import com.shop.entity.ItemImg;
-import com.shop.repository.ItemImgRepository;
+import com.example.ch8test.entity.ItemImg;
+import com.example.ch8test.repository.ItemImgRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

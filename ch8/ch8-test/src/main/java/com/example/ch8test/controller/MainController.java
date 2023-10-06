@@ -1,8 +1,9 @@
 package com.example.ch8test.controller;
 
-import com.shop.dto.ItemSearchDto;
-import com.shop.dto.MainItemDto;
-import com.shop.service.ItemService;
+
+import com.example.ch8test.dto.ItemSearchDto;
+import com.example.ch8test.dto.MainItemDto;
+import com.example.ch8test.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -22,6 +23,7 @@ public class MainController {
     @GetMapping(value = "/")
     public String main(ItemSearchDto itemSearchDto, Optional<Integer> page, Model model){
 
+        // 부트에서 페이징 처리를 쉽게 해 주는 인터페이스 기능
         Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 6);
         Page<MainItemDto> items = itemService.getMainItemPage(itemSearchDto, pageable);
 

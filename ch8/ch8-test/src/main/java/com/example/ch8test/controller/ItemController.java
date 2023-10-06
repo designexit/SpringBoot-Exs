@@ -1,9 +1,9 @@
 package com.example.ch8test.controller;
 
-import com.shop.dto.ItemFormDto;
-import com.shop.dto.ItemSearchDto;
-import com.shop.entity.Item;
-import com.shop.service.ItemService;
+import com.example.ch8test.dto.ItemFormDto;
+import com.example.ch8test.dto.ItemSearchDto;
+import com.example.ch8test.service.ItemService;
+import com.example.ch8test.entity.Item;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

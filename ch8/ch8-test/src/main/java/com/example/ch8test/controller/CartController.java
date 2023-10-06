@@ -1,9 +1,10 @@
 package com.example.ch8test.controller;
 
-import com.shop.dto.CartDetailDto;
-import com.shop.dto.CartItemDto;
-import com.shop.dto.CartOrderDto;
-import com.shop.service.CartService;
+
+import com.example.ch8test.dto.CartDetailDto;
+import com.example.ch8test.dto.CartItemDto;
+import com.example.ch8test.dto.CartOrderDto;
+import com.example.ch8test.service.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

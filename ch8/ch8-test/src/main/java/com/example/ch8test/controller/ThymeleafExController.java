@@ -1,6 +1,7 @@
 package com.example.ch8test.controller;
 
-import com.shop.dto.ItemDto;
+
+import com.example.ch8test.dto.ItemDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

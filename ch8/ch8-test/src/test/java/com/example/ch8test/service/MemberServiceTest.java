@@ -1,7 +1,7 @@
 package com.example.ch8test.service;
 
-import com.shop.dto.MemberFormDto;
-import com.shop.entity.Member;
+import com.example.ch8test.dto.MemberFormDto;
+import com.example.ch8test.entity.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
