@@ -1,8 +1,8 @@
 package com.example.ch8test.controller;
 
-import com.shop.dto.MemberFormDto;
-import com.shop.entity.Member;
-import com.shop.service.MemberService;
+import com.example.ch8test.dto.MemberFormDto;
+import com.example.ch8test.entity.Member;
+import com.example.ch8test.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;

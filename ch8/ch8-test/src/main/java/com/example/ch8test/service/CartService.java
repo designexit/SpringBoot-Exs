@@ -1,17 +1,18 @@
 package com.example.ch8test.service;
 
-import com.shop.dto.CartDetailDto;
-import com.shop.dto.CartItemDto;
-import com.shop.dto.CartOrderDto;
-import com.shop.dto.OrderDto;
-import com.shop.entity.Cart;
-import com.shop.entity.CartItem;
-import com.shop.entity.Item;
-import com.shop.entity.Member;
-import com.shop.repository.CartItemRepository;
-import com.shop.repository.CartRepository;
-import com.shop.repository.ItemRepository;
-import com.shop.repository.MemberRepository;
+
+import com.example.ch8test.dto.CartDetailDto;
+import com.example.ch8test.dto.CartItemDto;
+import com.example.ch8test.dto.CartOrderDto;
+import com.example.ch8test.dto.OrderDto;
+import com.example.ch8test.entity.Cart;
+import com.example.ch8test.entity.CartItem;
+import com.example.ch8test.entity.Item;
+import com.example.ch8test.entity.Member;
+import com.example.ch8test.repository.CartItemRepository;
+import com.example.ch8test.repository.CartRepository;
+import com.example.ch8test.repository.ItemRepository;
+import com.example.ch8test.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

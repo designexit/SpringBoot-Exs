@@ -1,8 +1,8 @@
 package com.example.ch8test.controller;
 
-import com.shop.dto.OrderDto;
-import com.shop.dto.OrderHistDto;
-import com.shop.service.OrderService;
+import com.example.ch8test.dto.OrderDto;
+import com.example.ch8test.dto.OrderHistDto;
+import com.example.ch8test.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
