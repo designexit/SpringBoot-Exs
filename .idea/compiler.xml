@@ -8,27 +8,39 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ch8-test" />
-        <module name="ch3-test" />
-        <module name="ch5-test" />
-        <module name="ch2-test-homework" />
-        <module name="ch4-test" />
+        <module name="ch7_8_test" />
+        <module name="teamProject-mk" />
+        <module name="GooddayClass" />
+        <module name="teamProject-mk2" />
         <module name="ch6-test" />
-        <module name="ch2-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
+      <module name="ch2-test" target="11" />
+      <module name="ch2-test-homework" target="11" />
+      <module name="ch3-test" target="11" />
+      <module name="ch4-test" target="11" />
       <module name="ch4-test3" target="11" />
+      <module name="ch5-test" target="11" />
+      <module name="lecture101" target="11" />
+      <module name="teamProject-mk3" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="GooddayClass" options="-parameters" />
       <module name="ch2-test" options="-parameters" />
       <module name="ch2-test-homework" options="-parameters" />
       <module name="ch3-test" options="-parameters" />
       <module name="ch4-test" options="-parameters" />
       <module name="ch5-test" options="-parameters" />
       <module name="ch6-test" options="-parameters" />
+      <module name="ch7_8_test" options="-parameters" />
       <module name="ch8-test" options="-parameters" />
+      <module name="lecture101" options="-parameters" />
+      <module name="teamProject-mk" options="-parameters" />
+      <module name="teamProject-mk2" options="-parameters" />
+      <module name="teamProject-mk3" options="-parameters" />
     </option>
   </component>
 </project>

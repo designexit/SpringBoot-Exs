@@ -5,7 +5,7 @@ import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.example.ch8test.constant.ItemSellStatus;
 import com.example.ch8test.entity.Item;
-import com.shop.entity.QItem;
+import com.example.ch8test.entity.QItem;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
